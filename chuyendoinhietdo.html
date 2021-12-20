@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<p>
+  <label>Độ F</label>
+  <input id="inputFahrenheit" type="number" placeholder="độ F"
+         oninput="temperatureConverter(this.value)"
+         onchange="temperatureConverter(this.value)">
+</p>
+<p>Độ C:  <span id="outputCelsius"></span></p>
+<script>
+  function temperatureConverter(DoF) {
+    DoF = parseFloat(DoF);
+    document.getElementById("outputCelsius").innerHTML = (DoF-32) / 1.8;
+  }
+</script>
+
+</body>
+</html>
